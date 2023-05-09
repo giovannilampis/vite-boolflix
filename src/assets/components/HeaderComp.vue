@@ -1,7 +1,10 @@
 <script >
 
 export default {
-  name: 'HeaderComp'
+  name: 'HeaderComp',
+  components: {
+    AppSearch
+  }
 }
 
 </script>
@@ -12,7 +15,7 @@ export default {
 
     <h1 class="text-uppercase">boolflix</h1>
 
-    search bar
+    <AppSearch/>
 
   </header>
 
