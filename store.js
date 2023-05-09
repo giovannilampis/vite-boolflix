@@ -1,5 +1,6 @@
 import { reactive } from "vue";
 
 export const store = reactive({
-    baseUrl: 'https://api.themoviedb.org/3/'
+    baseUrl: 'https://api.themoviedb.org/3/',
+    endPointMovie: '/search/movie'
 })
