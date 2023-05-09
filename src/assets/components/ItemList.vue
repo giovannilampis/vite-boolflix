@@ -23,13 +23,8 @@ export default {
         <h2 class="text-uppercase">movies</h2>
 
         <div class="row">
-
-            <div class="col-12 col-md-4 col-lg-2">
-                {{ movies }} 
-                <ItemSingle v-for="movie,index of store.movies" :key="index" :movie="movie" />
-
-            </div>
-
+          
+            <ItemSingle class="col-12 col-md-4 col-lg-2" v-for="movie,index of store.movies" :key="index" :movie="movie" />
 
         </div>
         
