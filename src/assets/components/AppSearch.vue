@@ -6,12 +6,15 @@ data() {
         text: ''
     }
 },
+methods: {
+    makeSearch()
+},
 
 
 </script>
 
 <template>
-    <form class="d-flex justify-content-center align-items-center">
+    <form class="d-flex justify-content-center align-items-center" @submit.prevent="makeSearch">
 
         <div class="me-2">
             <label class="visually-hidden" for="titlename">earch a title</label>
