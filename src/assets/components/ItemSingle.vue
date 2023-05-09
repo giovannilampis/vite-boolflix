@@ -1,5 +1,5 @@
 <script>
-
+import {store} from '../../../store'
 //original title
 //title
 //vote_average
@@ -7,9 +7,15 @@
 //id
 
 export default {
+    data() {
+        return {
+            store
+        }
+    },
     props: {
         movie: Object
     }
+    
 }
 
 </script>
@@ -17,12 +23,12 @@ export default {
 <template>
 
     <div class="my-card text-center">
-
-        <h4>{{ movie.original_title }}</h4>
+        <img class="w-100" :src="store.imageBaseUrl + movie.poster_path" alt="" style="">
         <div>{{ movie.title }}</div>
-        <div>{{ movie.vote_average }}</div>
+        <h4>{{ movie.original_title }}</h4>
         <div>{{ movie.original_lamguage }}</div>
-        <div>{{ movie.id }}</div>
+        <div>{{ movie.vote_average }}</div>
+        
 
     </div>
     
