@@ -9,7 +9,7 @@ export default {
     },
     data() {
         return {
-            movies: store.movies
+            store
         }
     }
 }
@@ -25,8 +25,8 @@ export default {
         <div class="row">
 
             <div class="col-12 col-md-4 col-lg-2">
-
-                <ItemSingle v-for="movie,index of movies" :key="index" :movie="movie" />
+                {{ movies }} 
+                <ItemSingle v-for="movie,index of store.movies" :key="index" :movie="movie" />
 
             </div>
 

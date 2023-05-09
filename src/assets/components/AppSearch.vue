@@ -18,6 +18,7 @@ export default {
     getMovie() {
            axios.get(this.store.baseUrl + this.store.endPointMovie + '?api_key=' + this.store.parameters.api_key + "&query=" + this.text )
            .then( response => { 
+            console.log(response.data.results)
              this.store.movies = response.data.results
             })
       }
