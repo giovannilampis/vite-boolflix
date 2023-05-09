@@ -1,5 +1,7 @@
 <script >
 
+import AppSearch from './AppSearch.vue';
+
 export default {
   name: 'HeaderComp',
   components: {
