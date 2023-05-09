@@ -8,7 +8,7 @@
 
 export default {
     props: {
-        item: Object
+        movie: Object
     }
 }
 
@@ -18,11 +18,11 @@ export default {
 
     <div class="my-card text-center">
 
-        <h4>{{ item.original_title }}</h4>
-        <div>{{ item.title }}</div>
-        <div>{{ item.vote_average }}</div>
-        <div>{{ item.original_lamguage }}</div>
-        <div>{{ item.id }}</div>
+        <h4>{{ movie.original_title }}</h4>
+        <div>{{ movie.title }}</div>
+        <div>{{ movie.vote_average }}</div>
+        <div>{{ movie.original_lamguage }}</div>
+        <div>{{ movie.id }}</div>
 
     </div>
     

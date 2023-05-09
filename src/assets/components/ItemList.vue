@@ -1,14 +1,16 @@
 <script>
-// import ItemSingleVue from './ItemSingle.vue'
+import ItemSingle from './ItemSingle.vue'
+import store from '../..//../store'
+import axios from 'axios'
 
 export default {
     name: 'ItemList',
-    components: {
+    components: { ItemSingle
     
     },
     data() {
         return {
-            
+            movies: store.movies
         }
     }
 }
@@ -25,7 +27,7 @@ export default {
 
             <div class="col-12 col-md-4 col-lg-2">
 
-                <ItemSingle/>
+                <ItemSingle v-for="movie,index of movies" :key="index" :movie="movie" />
 
             </div>
 
