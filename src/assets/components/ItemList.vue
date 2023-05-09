@@ -1,10 +1,15 @@
 <script>
-import ItemSingleVue from './ItemSingle.vue'
+// import ItemSingleVue from './ItemSingle.vue'
 
 export default {
     name: 'ItemList',
     components: {
-        ItemSingle
+    
+    },
+    data() {
+        return {
+            
+        }
     }
 }
 

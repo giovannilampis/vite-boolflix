@@ -1,15 +1,19 @@
 <script>
 
 export default {
-    name: 'ItemSingle',
-    components: {
-
+    props: {
+        item: Object
     }
 }
 
 </script>
 
 <template>
+
+    <div class="text-center">
+        <h4>Movie Title</h4>
+
+    </div>
     
 </template>
 
