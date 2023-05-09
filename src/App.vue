@@ -3,11 +3,14 @@
 // import axios from 'axios';
 // import {store} from './store'
 import HeaderComp from './assets/components/HeaderComp.vue';
+import ItemList from './assets/components/ItemList.vue';
+
 
 export default {
     name: 'app',
     components: {
-        HeaderComp
+        HeaderComp,
+        ItemList
     },
     data() {
         return {
@@ -18,7 +21,7 @@ export default {
 
     },
     created() {
-        
+
     }
 }
 
@@ -27,6 +30,12 @@ export default {
 <template>
 
   <HeaderComp/>
+
+  <main>
+
+    <ItemList/>
+
+  </main>
 
 </template>
 
