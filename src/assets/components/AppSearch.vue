@@ -1,15 +1,26 @@
 <script>
+import axios from 'axios';
+import {store} from '../../../store'
+
 export default {
   name: 'AppSearch',
   data() {
     return {
-        text: ''
+        text: '',
+        store
     }
 },
   methods: {
     makeSearch() {
+      this.getMovie()
         console.log(this.text)
-    }
+    },
+    getMovie() {
+           axios.get(this.store.baseUrl + this.store.endPointMovie + '?api_key=' + this.store.parameters.api_key + "&query=" + this.text )
+           .then( response => { 
+             this.store.movies = response.data.results
+            })
+      }
   },
 
 }
@@ -19,7 +30,7 @@ export default {
 <template>
   <form
     class="d-flex justify-content-center align-items-center"
-    @submit.prevent="makeSearch"
+    @submit.prevent="getMovie"
   >
     <div class="me-2">
       <label class="visually-hidden" for="titlename">earch a title</label>
