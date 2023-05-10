@@ -22,7 +22,10 @@ export default {
         <img class="w-100" :src="store.imageBaseUrl + movie.poster_path" alt="" style="">
         <div>{{ movie.title }}</div>
         <h4>{{ movie.original_title }}</h4>
-        <div>{{ movie.original_lamguage }}</div>
+        <div v-if="availableFlags.includes(movie.original_language)">
+            <img :src="'../../../public/images/' + movie.original_language + '.png'" :alt="movie.original_language + 'flag'">
+        </div>
+        <div v-else>{{ movie.original_language }}</div>
         <div>{{ movie.vote_average }}</div>
         
 
