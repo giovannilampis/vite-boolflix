@@ -28,7 +28,7 @@ export default {
               axios.get(this.store.baseUrl + this.store.endPointTv + '?language=' + this.store.parameters.language + '&api_key=' + this.store.parameters.api_key + "&query=" + this.text )
              .then( response => { 
               console.log(response.data.results)
-               this.store.movies = [...this.store.movies, ...response.data.results];
+               this.store.series = response.data.results;
               })
               // EMPTY INPUT FIELD AFTER SEARCH
               this.text = '';

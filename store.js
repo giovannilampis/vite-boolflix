@@ -11,6 +11,7 @@ export const store = reactive({
         language: 'it-IT'
     },
     movies: [],
+    series: [],
     languages: {
         "it-IT": ""
     }
