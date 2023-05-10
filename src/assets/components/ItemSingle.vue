@@ -19,7 +19,7 @@ export default {
 <template>
 
     <div class="my-card mx-3 col-12 col-md-4 col-lg-2 text-center">
-        <img class="mb-3" :src="movie.poster_path? store.imageBaseUrl + movie.poster_path : 'https://picsum.photos/320/450'" alt="{{ movie.title }}">
+        <img class="mb-3" :src="movie.poster_path? store.imageBaseUrl + movie.poster_path : 'https://picsum.photos/342/450'" alt="{{ movie.title }}">
         <div class="mb-2">{{ movie.title }}</div>
         <h4>{{ movie.original_title }}</h4>
         <div v-if="availableFlags.includes(movie.original_language)">
