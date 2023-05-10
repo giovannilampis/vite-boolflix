@@ -18,9 +18,9 @@ export default {
 
 <template>
 
-    <h2 class="text-center text-uppercase">series</h2>
-
     <section class="container">
+
+        <h2 class="text-center text-uppercase">series</h2>
 
         <div class="row justify-content-center">
           
@@ -36,7 +36,10 @@ export default {
 
 section {
     position: relative;
-    margin-top: 8rem;
+    margin-top: 2rem;
+}
+div.row {
+    padding-top: 1rem;
 }
 
 </style>

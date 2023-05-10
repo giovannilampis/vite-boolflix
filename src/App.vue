@@ -48,7 +48,7 @@ body {
 
 main {
     position: relative;
-    margin-top: 8rem;
+    margin-top: 9rem;
 }
 
 </style>

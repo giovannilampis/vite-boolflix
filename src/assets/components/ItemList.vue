@@ -33,5 +33,8 @@ export default {
 </template>
 
 <style scoped>
+div.row {
+    padding-top: 1rem;
+}
 
 </style>
