@@ -26,8 +26,10 @@ export default {
             <img class="flag mb-2" :src="'../../../public/images/' + serie.original_language + '.png'" :alt="serie.original_language + ' flag'">
         </div>
         <div v-else class="mb-2">{{ serie.original_language }}</div>
-        <small>{{ serie.vote_average }}</small>
-        
+        <div>
+            <span v-for="star in 5" class="fa-regular fa-star"></span>
+            <small>{{ serie.vote_average }}</small>
+        </div>        
     </div>
     
 </template>

@@ -26,8 +26,10 @@ export default {
             <img class="flag mb-2" :src="'../../../public/images/' + movie.original_language + '.png'" :alt="movie.original_language + ' flag'">
         </div>
         <div v-else class="mb-2">{{ movie.original_language }}</div>
-        <small>{{ movie.vote_average }}</small>
-        
+        <div>
+            <span v-for="star in 5" class="fa-regular fa-star"></span>
+            <small>{{ movie.vote_average }}</small>
+        </div>
     </div>
     
 </template>
@@ -48,6 +50,10 @@ export default {
     width: 95%;
     margin: 0 auto;
 }
+
+/* .fa-star {
+    color: yellow;
+} */
 
 .flag {
     width: 2rem;
