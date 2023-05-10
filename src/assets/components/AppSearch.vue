@@ -52,7 +52,7 @@ export default {
 
   <form
     class="d-flex justify-content-center align-items-center"
-    @submit.prevent="getMovie">
+    @submit.prevent="makeSearch">
 
     <div class="me-2">
       <label class="visually-hidden" for="titlename">earch a title</label>
