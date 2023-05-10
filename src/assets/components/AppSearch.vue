@@ -18,11 +18,19 @@ export default {
     },
 
     getMovie() {
-           axios.get(this.store.baseUrl + this.store.endPointMovie + '?language=' + this.store.parameters.language + '&api_key=' + this.store.parameters.api_key + "&query=" + this.text )
-           .then( response => { 
-            console.log(response.data.results)
-             this.store.movies = response.data.results
-            })
+            // SEARCH MOVIE
+            axios.get(this.store.baseUrl + this.store.endPointMovie + '?language=' + this.store.parameters.language + '&api_key=' + this.store.parameters.api_key + "&query=" + this.text )
+            .then( response => { 
+             console.log(response.data.results)
+              this.store.movies = response.data.results
+             })
+            //  SEARCH TV SERIES
+              axios.get(this.store.baseUrl + this.store.endPointTv + '?language=' + this.store.parameters.language + '&api_key=' + this.store.parameters.api_key + "&query=" + this.text )
+             .then( response => { 
+              console.log(response.data.results)
+               this.store.movies = [...this.store.movies, ...response.data.results];
+              })
+
     }
   },
 
