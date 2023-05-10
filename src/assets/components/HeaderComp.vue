@@ -41,12 +41,13 @@ header {
   top: 0;
   width: 100%;
   z-index: 999;
-  background: linear-gradient(to bottom, black, transparent);
+  background-color: #141414;
   border-bottom: 1px solid lightgrey;
 }
 
 header > div {
   height: 100%;
+  
 }
 
 h1 {
