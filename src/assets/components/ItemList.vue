@@ -18,7 +18,7 @@ export default {
 
 <template>
 
-    <h2 class="text-center text-uppercase">movies</h2>
+    <h2 v-if="store.movies.length > 0" class="text-center text-uppercase">movies</h2>
 
     <section class="container">
 

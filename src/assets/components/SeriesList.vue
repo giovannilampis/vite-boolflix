@@ -20,7 +20,7 @@ export default {
 
     <section class="container">
 
-        <h2 class="text-center text-uppercase">series</h2>
+        <h2 v-if="store.series.length > 0" class="text-center text-uppercase">series</h2>
 
         <div class="row justify-content-center">
           
