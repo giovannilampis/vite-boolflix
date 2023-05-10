@@ -1,7 +1,5 @@
 <script >
 
-
-
 import HeaderComp from './assets/components/HeaderComp.vue';
 import ItemList from './assets/components/ItemList.vue';
 import SeriesList from './assets/components/SeriesList.vue';
@@ -46,6 +44,11 @@ export default {
 body {
     background-color: #141414;
     color: #ffffff;
+}
+
+main {
+    position: relative;
+    margin-top: 8rem;
 }
 
 </style>

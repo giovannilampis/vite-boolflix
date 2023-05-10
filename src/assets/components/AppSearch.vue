@@ -15,10 +15,10 @@ export default {
     makeSearch() {
 
       this.getMovie()
-      console.log(this.text)
+      // console.log(this.text)
 
       this.getSeries()
-      console.log(this.text)
+      // console.log(this.text)
 
     },
 

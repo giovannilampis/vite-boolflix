@@ -3,7 +3,7 @@ import SeriesSingle from './SeriesSingle.vue'
 import {store} from '../../../store'
 
 export default {
-    name: 'ItemList',
+    name: 'SeriesList',
     components: { SeriesSingle
     
     },
@@ -24,7 +24,7 @@ export default {
 
         <div class="row justify-content-center">
           
-            <SeriesSingle v-for="serie,index of store.series" :key="index" :serie="serie" />
+            <SeriesSingle v-for="(serie,index) in store.series" :key="index" :serie="serie" />
 
         </div>
         

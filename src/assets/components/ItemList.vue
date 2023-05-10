@@ -24,7 +24,7 @@ export default {
 
         <div class="row justify-content-center">
           
-            <ItemSingle v-for="movie,index of store.movies" :key="index" :movie="movie" />
+            <ItemSingle v-for="(movie,index) in store.movies" :key="index" :movie="movie" />
 
         </div>
         
@@ -33,10 +33,5 @@ export default {
 </template>
 
 <style scoped>
-
-section {
-    position: relative;
-    margin-top: 8rem;
-}
 
 </style>
