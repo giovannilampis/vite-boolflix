@@ -13,27 +13,35 @@ export default {
   methods: {
 
     makeSearch() {
+
       this.getMovie()
-        console.log(this.text)
+      console.log(this.text)
+
+      this.getSeries()
+      console.log(this.text)
+
     },
 
     getMovie() {
             // SEARCH MOVIE
             axios.get(this.store.baseUrl + this.store.endPointMovie + '?language=' + this.store.parameters.language + '&api_key=' + this.store.parameters.api_key + "&query=" + this.text )
             .then( response => { 
-             console.log(response.data.results)
-              this.store.movies = response.data.results
-             })
-            //  SEARCH TV SERIES
-              axios.get(this.store.baseUrl + this.store.endPointTv + '?language=' + this.store.parameters.language + '&api_key=' + this.store.parameters.api_key + "&query=" + this.text )
-             .then( response => { 
-              console.log(response.data.results)
-               this.store.series = response.data.results;
-              })
-              // EMPTY INPUT FIELD AFTER SEARCH
-              this.text = '';
+            console.log(response.data.results)
+            this.store.movies = response.data.results
+            })
 
+    },
+    getSeries() {
+              //  SEARCH TV SERIES
+            axios.get(this.store.baseUrl + this.store.endPointTv + '?language=' + this.store.parameters.language + '&api_key=' + this.store.parameters.api_key + "&query=" + this.text )
+            .then( response => { 
+            console.log(response.data.results)
+            this.store.series = response.data.results;
+            })
+            // EMPTY INPUT FIELD AFTER SEARCH
+            this.text = '';
     }
+    
   },
 
 }

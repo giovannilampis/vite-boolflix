@@ -19,7 +19,7 @@ export default {
 <template>
 
     <div class="my-card mx-3 col-12 col-md-4 col-lg-2 text-center">
-        <img class="mb-3" :src="store.imageBaseUrl + movie.poster_path" alt="" style="">
+        <img class="mb-3" :src="store.imageBaseUrl + movie.poster_path" alt="{{ movie.title }}">
         <div class="mb-2">{{ movie.title }}</div>
         <h4>{{ movie.original_title }}</h4>
         <div v-if="availableFlags.includes(movie.original_language)">
@@ -28,7 +28,6 @@ export default {
         <div v-else class="mb-2">{{ movie.original_language }}</div>
         <small>{{ movie.vote_average }}</small>
         
-
     </div>
     
 </template>
