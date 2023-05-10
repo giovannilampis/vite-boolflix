@@ -8,6 +8,11 @@ export default {
             availableFlags: ['it', 'en', 'de', 'es', 'fr']
         }
     },
+    computed: {
+        starsVotation() {
+            return Math.ceil(this.serie.vote_average / 2)
+        }
+    },
     props: {
         serie: Object
     }
@@ -27,8 +32,9 @@ export default {
         </div>
         <div v-else class="mb-2">{{ serie.original_language }}</div>
         <div>
-            <span v-for="star in 5" class="fa-regular fa-star"></span>
-            <small>{{ serie.vote_average }}</small>
+            <small v-for="y in 5" class="fa-star" :class="y <= starsVotation ? 'fa-solid' : 'fa-regular'"></small>
+
+            <!-- <small>{{ serie.vote_average }}</small> -->
         </div>        
     </div>
     

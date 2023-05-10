@@ -33,7 +33,7 @@ export default {
         <div v-else class="mb-2">{{ movie.original_language }}</div>
         <div>
             <small v-for="x in 5" class="fa-star" :class="x <= starsVote ? 'fa-solid' : 'fa-regular'"></small>
-            <small>{{ movie.vote_average }}</small>
+            <!-- <small>{{ movie.vote_average }}</small> -->
         </div>
     </div>
     
@@ -55,11 +55,6 @@ export default {
     width: 95%;
     margin: 0 auto;
 }
-
-/* .fa-star {
-    color: yellow;
-} */
-
 .flag {
     width: 2rem;
     aspect-ratio: 1 / 1;
