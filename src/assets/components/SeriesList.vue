@@ -1,10 +1,10 @@
 <script>
-import ItemSingle from './ItemSingle.vue'
+import SeriesSingle from './SeriesSingle.vue'
 import {store} from '../../../store'
 
 export default {
     name: 'ItemList',
-    components: { ItemSingle
+    components: { SeriesSingle
     
     },
     data() {
@@ -18,13 +18,13 @@ export default {
 
 <template>
 
-    <h2 class="text-center text-uppercase">movies</h2>
+    <h2 class="text-center text-uppercase">series</h2>
 
     <section class="container">
 
         <div class="row justify-content-center">
           
-            <ItemSingle v-for="movie,index of store.movies" :key="index" :movie="movie" />
+            <SeriesSingle v-for="serie,index of store.series" :key="index" :serie="serie" />
 
         </div>
         

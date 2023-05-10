@@ -4,13 +4,14 @@
 
 import HeaderComp from './assets/components/HeaderComp.vue';
 import ItemList from './assets/components/ItemList.vue';
-
+import SeriesList from './assets/components/SeriesList.vue';
 
 export default {
     name: 'app',
     components: {
         HeaderComp,
-        ItemList
+        ItemList,
+        SeriesList
     },
     data() {
         return {
@@ -30,6 +31,8 @@ export default {
         <main>
 
             <ItemList/>
+
+            <SeriesList/>
 
         </main>
 
