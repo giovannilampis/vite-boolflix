@@ -32,7 +32,7 @@ export default {
         </div>
         <div v-else class="mb-2">{{ movie.original_language }}</div>
         <div>
-            <span v-for="star in 5" class="fa-regular fa-star"></span>
+            <small v-for="x in 5" class="fa-star" :class="x <= starsVote ? 'fa-solid' : 'fa-regular'"></small>
             <small>{{ movie.vote_average }}</small>
         </div>
     </div>
