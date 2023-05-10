@@ -30,6 +30,8 @@ export default {
               console.log(response.data.results)
                this.store.movies = [...this.store.movies, ...response.data.results];
               })
+              // EMPTY INPUT FIELD AFTER SEARCH
+              this.text = '';
 
     }
   },

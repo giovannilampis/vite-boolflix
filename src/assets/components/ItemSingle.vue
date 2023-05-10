@@ -1,10 +1,5 @@
 <script>
 import {store} from '../../../store'
-//original title
-//title
-//vote_average
-//original_lamguage
-//id
 
 export default {
     data() {
