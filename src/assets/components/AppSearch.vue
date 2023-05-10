@@ -59,7 +59,7 @@ export default {
     </div>
 
     <div>
-      <button type="submit" class="btn btn-primary text-uppercase">cerca</button>
+      <button type="submit" class="btn btn-danger text-uppercase">cerca</button>
     </div>
 
   </form>
