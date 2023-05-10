@@ -23,7 +23,7 @@ export default {
         <div>{{ movie.title }}</div>
         <h4>{{ movie.original_title }}</h4>
         <div v-if="availableFlags.includes(movie.original_language)">
-            <img :src="'../../../public/images/' + movie.original_language + '.png'" :alt="movie.original_language + 'flag'">
+            <img class="flag" :src="'../../../public/images/' + movie.original_language + '.png'" :alt="movie.original_language + 'flag'">
         </div>
         <div v-else>{{ movie.original_language }}</div>
         <div>{{ movie.vote_average }}</div>
@@ -35,5 +35,9 @@ export default {
 
 <style scoped>
 
+.flag {
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+}
 
 </style>
