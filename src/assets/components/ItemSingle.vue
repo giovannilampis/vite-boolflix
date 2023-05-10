@@ -8,6 +8,11 @@ export default {
             availableFlags: ['it', 'en', 'de', 'es', 'fr']
         }
     },
+    computed: {
+        starsVote() {
+            return Math.ceil(this.movie.vote_average / 2)
+        }
+    },
     props: {
         movie: Object
     }
