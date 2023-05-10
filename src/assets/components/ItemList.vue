@@ -33,6 +33,7 @@ export default {
 <style scoped>
 
 section {
+    position: relative;
     margin-top: 8rem;
 }
 

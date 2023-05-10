@@ -36,12 +36,17 @@ export default {
 
 header {
   height: 6rem;
-  padding: 0 3rem;
+  padding: 3rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
+  background: linear-gradient(to bottom, black, transparent);
   border-bottom: 1px solid lightgrey;
+}
+
+header > div {
+  height: 100%;
 }
 
 h1 {

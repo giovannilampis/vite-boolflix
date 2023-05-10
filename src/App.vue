@@ -23,16 +23,26 @@ export default {
 
 <template>
 
-  <HeaderComp/>
+    <body>
+        
+        <HeaderComp/>
 
-  <main>
+        <main>
 
-    <ItemList/>
+            <ItemList/>
 
-  </main>
+        </main>
+
+    </body>
 
 </template>
 
 <style lang="scss">
 @use './style/main.scss';
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+}
+
 </style>
