@@ -33,8 +33,14 @@ export default {
 </template>
 
 <style scoped>
+
+section {
+    overflow: hidden;
+}
 div.row {
     padding-top: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 </style>

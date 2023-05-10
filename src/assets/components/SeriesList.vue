@@ -36,10 +36,14 @@ export default {
 
 section {
     position: relative;
+    overflow: hidden;
     margin-top: 2rem;
 }
 div.row {
     padding-top: 1rem;
+    padding-top: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 </style>
