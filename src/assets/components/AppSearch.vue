@@ -11,17 +11,19 @@ export default {
     }
 },
   methods: {
+
     makeSearch() {
       this.getMovie()
         console.log(this.text)
     },
+
     getMovie() {
            axios.get(this.store.baseUrl + this.store.endPointMovie + '?language=' + this.store.parameters.language + '&api_key=' + this.store.parameters.api_key + "&query=" + this.text )
            .then( response => { 
             console.log(response.data.results)
              this.store.movies = response.data.results
             })
-      }
+    }
   },
 
 }
@@ -29,10 +31,11 @@ export default {
 </script>
 
 <template>
+
   <form
     class="d-flex justify-content-center align-items-center"
-    @submit.prevent="getMovie"
-  >
+    @submit.prevent="getMovie">
+
     <div class="me-2">
       <label class="visually-hidden" for="titlename">earch a title</label>
 
@@ -48,7 +51,9 @@ export default {
     <div>
       <button type="submit" class="btn btn-primary text-uppercase">cerca</button>
     </div>
+
   </form>
+
 </template>
 
 <style scoped></style>
