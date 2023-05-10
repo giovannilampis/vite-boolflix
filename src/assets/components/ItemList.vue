@@ -20,9 +20,9 @@ export default {
 
     <section class="container">
 
-        <div class="row">
+        <div class="row justify-content-center">
           
-            <ItemSingle class="col-12 col-md-4 col-lg-2" v-for="movie,index of store.movies" :key="index" :movie="movie" />
+            <ItemSingle v-for="movie,index of store.movies" :key="index" :movie="movie" />
 
         </div>
         
