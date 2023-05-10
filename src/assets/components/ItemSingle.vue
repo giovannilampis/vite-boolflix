@@ -4,7 +4,8 @@ import {store} from '../../../store'
 export default {
     data() {
         return {
-            store
+            store,
+            availableFlags: ['it', 'en', 'de', 'es', 'fr']
         }
     },
     props: {
