@@ -5,7 +5,8 @@ export default {
     data() {
         return {
             store,
-            availableFlags: ['it', 'en', 'de', 'es', 'fr']
+            availableFlags: ['it', 'en', 'de', 'es', 'fr'],
+            isFlipped: false
         }
     },
     methods: {
@@ -28,13 +29,13 @@ export default {
 
 <template>
 
-    <div @click="toggleCard" :class="{ 'is-flipped': isFlipped }" class="my-card mx-3 col-12 col-md-4 col-lg-2 text-center">
+    <div @click="toggleCard" class="my-card mx-3 col-12 col-md-4 col-lg-2 text-center">
 
-        <div class="card-inner">
+        <div :class="{ 'is-flipped': isFlipped }" class="card-inner">
 
             <div class="card-face card-face-front">
 
-                <img class="mb-3" :src="movie.poster_path? store.imageBaseUrl + movie.poster_path : 'https://picsum.photos/342/450'" alt="{{ movie.title }}">
+                <img class="mb-3" :src="movie.poster_path? store.imageBaseUrl + movie.poster_path : 'https://picsum.photos/342/510'" alt="{{ movie.title }}">
                 <small class="mb-2">{{ movie.title }}</small>
                 <h5>{{ movie.original_title }}</h5>
         
@@ -87,6 +88,7 @@ export default {
     --light: #F3F3F3;
 }
 .my-card {
+    height: 450px;
     margin-bottom: 1rem;
     text-align: center;
     padding: 0.5rem;
@@ -128,8 +130,9 @@ export default {
 .card-face-front {
     background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content: start;
 }
 
 .card-face-back {
