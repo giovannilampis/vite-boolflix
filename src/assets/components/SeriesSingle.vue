@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-
+ 
     <div class="my-card mx-3 col-12 col-md-4 col-lg-2 text-center">
         <img class="mb-3" :src="serie.poster_path ? store.imageBaseUrl + serie.poster_path : 'https://picsum.photos/342/450'" alt="{{ serie.title }}">
         <small class="mb-2">{{ serie.name }}</small>
