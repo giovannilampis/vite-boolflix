@@ -52,18 +52,13 @@ export default {
             <div class="card-face card-face-back">
 
                 <div class="card-content">
+                
+                    <h5 class="py-5">{{ movie.title }}</h5>
 
-                    <small class="mb-2">{{ movie.title }}</small>
-                    <h5>{{ movie.original_title }}</h5>
-        
-                    <div class="d-flex justify-content-center align-items-center">
-                        <div v-if="availableFlags.includes(movie.original_language)">
-                            <img class="flag mb-2" :src="'../../../public/images/' + movie.original_language + '.png'" :alt="movie.original_language + ' flag'">
-                        </div>
-                        <div v-else class="mb-2">{{ movie.original_language }}</div>
-                        <small v-for="x in 5" class="fa-star" :class="x <= starsVote ? 'fa-solid' : 'fa-regular'"></small>
-                    </div>
+                    <p>{{ movie.overview }}</p>
 
+                    <small v-for="x in 5" class="py-5 fa-star" :class="x <= starsVote ? 'fa-solid' : 'fa-regular'"></small>
+    
                 </div>
 
             </div>
