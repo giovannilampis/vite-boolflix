@@ -16,8 +16,10 @@ export default {
   <header class="">
 
     <div class="container d-flex justify-content-between align-items-center">
-
-      <h1 class="text-uppercase">boolflix</h1>
+      
+      <div>
+        <img src="../../../public/images/logo-boolfix.png" alt="logo">
+      </div>
 
       <AppSearch/>
 
@@ -52,6 +54,7 @@ header > div {
 
 h1 {
   color: rgb(209, 31, 53);
+  font-weight: bold;
 }
 
 </style>
