@@ -25,16 +25,15 @@ export default {
 
     <div class="my-card mx-3 col-12 col-md-4 col-lg-2 text-center">
         <img class="mb-3" :src="serie.poster_path ? store.imageBaseUrl + serie.poster_path : 'https://picsum.photos/342/450'" alt="{{ serie.title }}">
-        <div class="mb-2">{{ serie.name }}</div>
-        <h4>{{ serie.original_name }}</h4>
-        <div v-if="availableFlags.includes(serie.original_language)">
-            <img class="flag mb-2" :src="'../../../public/images/' + serie.original_language + '.png'" :alt="serie.original_language + ' flag'">
-        </div>
-        <div v-else class="mb-2">{{ serie.original_language }}</div>
-        <div>
+        <small class="mb-2">{{ serie.name }}</small>
+        <h5>{{ serie.original_name }}</h5>
+        
+        <div class="d-flex justify-content-center align-items-center">
+            <div v-if="availableFlags.includes(serie.original_language)">
+                <img class="flag mb-2" :src="'../../../public/images/' + serie.original_language + '.png'" :alt="serie.original_language + ' flag'">
+            </div>
+            <span v-else class="mb-2">{{ serie.original_language }}</span>
             <small v-for="y in 5" class="fa-star" :class="y <= starsVotation ? 'fa-solid' : 'fa-regular'"></small>
-
-            <!-- <small>{{ serie.vote_average }}</small> -->
         </div>        
     </div>
     
@@ -62,7 +61,7 @@ export default {
     aspect-ratio: 1 / 1;
 }
 
-small {
+small:last-child {
     align-items: flex-end;
 }
 

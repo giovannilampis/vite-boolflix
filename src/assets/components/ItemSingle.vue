@@ -25,15 +25,15 @@ export default {
 
     <div class="my-card mx-3 col-12 col-md-4 col-lg-2 text-center">
         <img class="mb-3" :src="movie.poster_path? store.imageBaseUrl + movie.poster_path : 'https://picsum.photos/342/450'" alt="{{ movie.title }}">
-        <div class="mb-2">{{ movie.title }}</div>
-        <h4>{{ movie.original_title }}</h4>
-        <div v-if="availableFlags.includes(movie.original_language)">
-            <img class="flag mb-2" :src="'../../../public/images/' + movie.original_language + '.png'" :alt="movie.original_language + ' flag'">
-        </div>
-        <div v-else class="mb-2">{{ movie.original_language }}</div>
-        <div>
+        <small class="mb-2">{{ movie.title }}</small>
+        <h5>{{ movie.original_title }}</h5>
+       
+        <div class="d-flex justify-content-center align-items-center">
+            <div v-if="availableFlags.includes(movie.original_language)">
+                <img class="flag mb-2" :src="'../../../public/images/' + movie.original_language + '.png'" :alt="movie.original_language + ' flag'">
+             </div>
+            <div v-else class="mb-2">{{ movie.original_language }}</div>
             <small v-for="x in 5" class="fa-star" :class="x <= starsVote ? 'fa-solid' : 'fa-regular'"></small>
-            <!-- <small>{{ movie.vote_average }}</small> -->
         </div>
     </div>
     
@@ -58,10 +58,6 @@ export default {
 .flag {
     width: 2rem;
     aspect-ratio: 1 / 1;
-}
-
-small {
-    align-items: flex-end;
 }
 
 </style>
